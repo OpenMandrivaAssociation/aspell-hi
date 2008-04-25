@@ -1,7 +1,7 @@
 %define _enable_debug_packages %{nil}
 %define debug_package          %{nil}
 
-%define src_ver 0.01-0
+%define src_ver 0.02-0
 %define fname aspell6-%{languagecode}
 %define aspell_ver 0.60
 %define languageenglazy Hindi
@@ -10,8 +10,8 @@
 
 Summary:       %{languageenglazy} files for aspell
 Name:          aspell-%{languagecode}
-Version:       0.01.0
-Release:       %mkrel 5
+Version:       0.02.0
+Release:       %mkrel 1
 Group:         System/Internationalization
 Source:        http://ftp.gnu.org/gnu/aspell/dict/%{languagecode}/%{fname}-%{src_ver}.tar.bz2
 URL:		   http://aspell.net/
