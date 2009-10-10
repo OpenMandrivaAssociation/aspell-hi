@@ -11,9 +11,10 @@
 Summary:       %{languageenglazy} files for aspell
 Name:          aspell-%{languagecode}
 Version:       0.02.0
-Release:       %mkrel 4
+Release:       %mkrel 5
 Group:         System/Internationalization
 Source:        http://ftp.gnu.org/gnu/aspell/dict/%{languagecode}/%{fname}-%{src_ver}.tar.bz2
+Patch1:		hindu-specific-chars.patch
 URL:		   http://aspell.net/
 License:	   GPL
 BuildRoot:     %{_tmppath}/%{name}-%{version}-root
@@ -37,6 +38,9 @@ An %{languageenglazy} dictionary for use with aspell, a spelling checker.
 
 %prep
 %setup -q -n %{fname}-%{src_ver}
+%patch1 -p0
+mv u-deva.cset u-deva-hi.cset
+mv u-deva.cmap u-deva-hi.cmap
 
 %build
 # don't use configure macro
