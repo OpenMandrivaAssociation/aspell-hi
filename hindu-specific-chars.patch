@@ -1,0 +1,33 @@
+--- info	2007-10-25 20:50:45.000000000 +0200
++++ info	2009-10-10 21:39:18.000000000 +0200
+@@ -1,8 +1,8 @@
+ name_english Hindi
+ name_native हिंदी
+ lang hi
+-data-file u-deva.cset
+-data-file u-deva.cmap
++data-file u-deva-hi.cset
++data-file u-deva-hi.cmap
+ data-file hi_phonet.dat
+ data-file hi_affix.dat
+ data-file hi_repl.dat
+--- hi.dat	2007-10-25 08:31:50.000000000 +0200
++++ hi.dat	2009-10-10 21:39:40.000000000 +0200
+@@ -1,5 +1,5 @@
+ name hi
+-charset u-deva
++charset u-deva-hi
+ data-encoding utf-8
+ affix hi
+ affix-compress false
+--- Makefile.pre	2009-10-10 21:33:54.000000000 +0200
++++ Makefile-new.pre	2009-10-10 21:41:16.000000000 +0200
+@@ -4,7 +4,7 @@ lang = hi
+ version = 0.02-0
+ 
+ cwl_files = hi.cwl
+-data_files = hi.dat u-deva.cset u-deva.cmap hi_phonet.dat hi_affix.dat hi_repl.dat
++data_files = hi.dat u-deva-hi.cset u-deva-hi.cmap hi_phonet.dat hi_affix.dat hi_repl.dat
+ doc_files = README COPYING Copyright
+ extra_files = configure info Makefile.pre
+ multi_files = hi.multi hindi.alias
